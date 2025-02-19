@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>BMI Calculator</h1>
+        <div class="content">
+          <!-- Input group for age -->
+          <div class="input-group">
+            <label for="age">Age</label>
+            <input
+              type="text"
+              class="text-input"
+              id="age"
+              autocomplete="off"
+              min="0"
+              required
+            />
+          </div>
+
+          <!-- Radio buttons for gender selection -->
+          <div class="gender-group">
+            <label class="radio-container">
+              <input type="radio" name="gender" id="male" />
+              <p class="text">Male</p>
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="radio-container">
+              <input type="radio" name="gender" id="female" />
+              <p class="text">Female</p>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <!-- Input groups for height and weight -->
+          <div class="height-weight-container">
+            <div class="input-group">
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" min="0" required />
+            </div>
+
+            <div class="input-group">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" min="0" required />
+            </div>
+          </div>
+
+          <!-- Buttons for clearing fields and calculating BMI -->
+          <div class="button-group">
+            <!-- Clear Button -->
+            <button class="clear-button" id="clear" onclick="clearFields();">
+              Clear
+            </button>
+            <!-- Calculate Button -->
+            <button class="calculate-button" id="submit" onclick="calculate();">
+              Calculate BMI
+            </button>
+          </div>
+        </div>
+
+        <!-- Result display -->
+        <div class="result">
+          <p>Your BMI is</p>
+          <div id="bmi-result">00.00</div>
+          <p class="comment"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for displaying messages -->
+    <div id="modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
