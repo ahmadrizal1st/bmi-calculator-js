@@ -9,4 +9,4 @@ git clone https://github.com/ahmadrizal1st/bmi-calculator-js.git
 cd bmi-calculator-js
 ```
 ## 💻 Demo Project
-![Struktur NetBeans](demo.png)
+![Demo](demo.png)
